@@ -17,6 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatTableModule } from "@angular/material"
 import { AppRoutingModule } from './app-routing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatBadgeModule} from '@angular/material/badge';
 
 //componentes
 import { AppComponent } from './app.component';
@@ -47,6 +48,8 @@ import { GlobalService } from './servicios/global.service';
 //guard
 import { AuthGuard } from './guards/auth.guard';
 import { DocentesMantenimientoComponent } from './mantenimientos/docentes-mantenimiento/docentes-mantenimiento.component';
+import { ManejoCitasComponent } from './manejo-citas/manejo-citas.component';
+import { AgregarCitaComponent } from './crear-actualizar/agregar-cita/agregar-cita.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +71,8 @@ import { DocentesMantenimientoComponent } from './mantenimientos/docentes-manten
     NavSettingsComponent,
     GenerarCodigoComponent,
     DocentesMantenimientoComponent,
+    ManejoCitasComponent,
+    AgregarCitaComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,11 +95,13 @@ import { DocentesMantenimientoComponent } from './mantenimientos/docentes-manten
     MatSelectModule,
     AppRoutingModule,
     MatTooltipModule,
+    MatBadgeModule,
     NgbModule.forRoot(),
   ],
   exports: [
     MatButtonModule, 
     MatCheckboxModule,
+    MatBadgeModule,
     RouterModule
   ],
   providers: [

@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { GenerarCodigoComponent } from './generar-codigo/generar-codigo.component';
 import { AgregarEditarNoticiaComponent } from './crear-actualizar/agregar-editar-noticia/agregar-editar-noticia.component';
 import { AgregarEditarUsuarioComponent } from './crear-actualizar/agregar-editar-usuario/agregar-editar-usuario.component';
+import { ManejoCitasComponent } from './manejo-citas/manejo-citas.component';
+import {AgregarCitaComponent} from './crear-actualizar/agregar-cita/agregar-cita.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', 
@@ -54,7 +56,15 @@ const routes: Routes = [
     component: GenerarCodigoComponent,
     canActivate: [AuthGuard]
   },
-  
+  {path: 'citas',
+  component: ManejoCitasComponent,
+  canActivate: [AuthGuard]
+},
+{path: 'agregarCita',
+  component: AgregarCitaComponent ,
+  canActivate: [AuthGuard]
+},
+
   {path: '**', 
     component: PageNotFoundComponent
   }

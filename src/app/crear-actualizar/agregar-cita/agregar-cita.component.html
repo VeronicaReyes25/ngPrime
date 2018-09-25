@@ -1,0 +1,34 @@
+<p>hola</p> 
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center"> <strong>FORMULARIO DE REGISTRO</strong></h1>
+        <form (submit)="registrarUsuario()" [formGroup]="nuevaCita"> 
+          <div class="example-container">
+            <!--class="example-full-width"
+              <mat-form-field>
+                  <mat-label>Nombre del evento</mat-label>
+                  <input matInput placeholder="Escriba el nombre del evento" formControlName="evento" required>
+                  <mat-error *ngIf="nuevaCita.get('evento').hasError('required')">El nombre del evento es un dato <strong>requerido</strong></mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="ingresa la descripcion del evento" formControlName="evento" required>
+                  <mat-error *ngIf="nuevaCita.get('evento').hasError('required')">El nombre del evento es un dato <strong>requerido</strong></mat-error>
+              </mat-form-field>-->
+              <mat-form-field>
+                  <input matInput placeholder="ingresa la descripcion del evento" formControlName="evento" required>
+              </mat-form-field>
+              <mat-form-field >
+                <mat-label>Descripcion </mat-label>
+                  <textarea matInput placeholder="ingresa la descripcion del evento"></textarea>
+              </mat-form-field>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

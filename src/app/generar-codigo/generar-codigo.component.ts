@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup, FormControl , Validators} from '@angular/forms';
 import { GenerarCodigoService } from './servicios/generar-codigo.service';
 import { CodigosAspirante } from './servicios/codigos';
 import { ConsultarCodigosService } from './servicios/consultar-codigos.service';
+import * as jsPDF from 'jspdf';
 
 @Component({
        selector: 'app-generar-codigo',
@@ -77,31 +78,32 @@ import { ConsultarCodigosService } from './servicios/consultar-codigos.service';
     //   get cantidad() {
       //   return this.myForm.get('cantidad');
       // }
-    // public  downloadPDF () {
-     // let doc = new jsPDF;
-     // let specialElementHandlers = {
-     //   '#editor': function(element, renderer) {
-     //     return true;
-      //  }
-      // };
-     //  let content = this.content.nativeElement;
-     //  doc.fromHTML(content.innerHTML, 15, 15, {
-     // 'width': 190,
-     // 'elementHandlers': specialElementHandlers
-     // });
-     // doc.save('test.pdf');
-     // }
-     //  uniqueNumber.previous = 0;
-     // uniqueNumber()
-        // let date = Date.now();
-        // if (date <= this.uniqueNumber.previous) {
-        //     date = ++uniqueNumber.previous;
-        // } else {
-        //     uniqueNumber.previous = date;
-        // }
-         // return date;
-     // }
-     // ID() {
-      // return uniqueNumber ();
-     // }
+    public  downloadPDF () {
+     let doc = new jsPDF();
+     let specialElementHandlers = {
+     '#editor': function(element, renderer) {
+         return true;
+      }
+     };
+       let content = this.content.nativeElement;
+       doc.fromHTML(content.innerHTML, 15, 15, {
+      'width': 190,
+      'elementHandlers': specialElementHandlers
+      });
+      doc.save('test.pdf');
+      }
+
+  //     uniqueNumber.previous = 0;
+  //    uniqueNumber()
+  //      let date = Date.now();
+  //       if (date <= this.uniqueNumber.previous) {
+  //           date = ++uniqueNumber.previous;
+  //       } else {
+  //          uniqueNumber.previous = date;
+  //      }
+  //       return date;
+  //    }
+  //   ID() {
+  //    return uniqueNumber ();
+   //   }
 }

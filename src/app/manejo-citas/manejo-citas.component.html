@@ -1,0 +1,25 @@
+<!--<div class="input" style="padding: 2rem; text-align: center; align-content: center;">
+  <label><h2><strong>MANEJO DE CITAS</strong></h2></label>	
+  
+  <div class="example-header">
+		<div class="rigth">
+			<button mat-fab class="col" (click) = "newEvent()" matTooltip="Crear un evento">
+				<mat-icon>add</mat-icon>
+			</button>
+    </div>
+    <div class="rigth">
+
+        
+        <button mat-fab class="col" (click) = "notificaciones()" matTooltip="Citas del siguiente dia">
+          <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+        </button>
+    
+  
+   
+  </div>
+</div> -->
+<p-schedule [events]="events" [header]="header" defaultDate="2017-02-01" [eventLimit]="4" [editable]="true"></p-schedule>
+ <p-schedule [events]="events" [header]="headerConfig"></p-schedule>
+    <p-schedule [events]="events"></p-schedule>
+
+
